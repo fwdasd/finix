@@ -1,0 +1,14 @@
+256B		0100h
+ 1K 		0400h
+64K			1000h
+
+
+
+制作引导盘：
+	制作映像：
+	dd if=/dev/zero of=myos.img bs=512 count=2880
+
+	直接用dd写文件到引导盘：
+	dd if=输入 of=输出 bs=512 skip= seek= count= 
+
+	格式化文件系统：mkfs
